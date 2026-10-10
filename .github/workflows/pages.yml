@@ -26,8 +26,7 @@ jobs:
       - name: Prepare website
         run: |
           mkdir _site
-          cp index.html _site/index.html
-          if [ -f Patcher.zip ]; then cp Patcher.zip _site/Patcher.zip; fi
+          cp index.html CNAME _site/
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
